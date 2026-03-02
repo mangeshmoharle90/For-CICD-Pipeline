@@ -1,9 +1,3 @@
-from flask import Flask
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Container running successfully!! This is 2nd app"
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001)
+#app1.py 
+def demo():
+    return "I am in demo udf inside app1.py")
