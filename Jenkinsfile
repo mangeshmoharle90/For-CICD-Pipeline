@@ -41,4 +41,14 @@ stage('Checkout Code') {
         }
     }
 }
+        stage('Deploy to Kubernetes') {
+            steps {
+                echo "Deploying to Kubernetes..."
+
+                sh """
+                kubectl apply -f deployment.yml
+                kubectl apply -f service.yml
+                """
+            }
+        }
 
